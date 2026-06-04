@@ -201,6 +201,46 @@
   color: #991b1b;
 }
 
+@media (max-width: 768px) {
+  .card {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+  }
+
+  .metaBlock {
+    grid-template-columns: 1fr;
+  }
+
+  .signatureRow {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .history li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .historyActions {
+    width: 100%;
+  }
+}
+
 @media print {
   .actions,
   .history {

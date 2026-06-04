@@ -146,3 +146,29 @@
 .secondary:hover {
   background: #d1d5db;
 }
+
+@media (max-width: 768px) {
+  .card {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .results {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+  }
+}

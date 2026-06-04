@@ -22,10 +22,12 @@ body {
   background: #eef2f7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 #root {
   isolation: isolate;
+  overflow-x: hidden;
 }
 
 button {
