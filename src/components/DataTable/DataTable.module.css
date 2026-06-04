@@ -1,0 +1,281 @@
+.container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.04);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.metaForm {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 1024px) {
+  .metaForm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.metaField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.metaField input {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #f9fafb;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.metaField input:focus {
+  border-color: #2d3a5b;
+  background: #fff;
+  outline: none;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton,
+.dangerButton {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.15s, transform 0.05s;
+}
+
+.primaryButton {
+  background: #1f2a44;
+  color: #fff;
+}
+
+.primaryButton:hover:not(:disabled) {
+  background: #2d3a5b;
+}
+
+.secondaryButton {
+  background: #e5e7eb;
+  color: #1f2a44;
+}
+
+.secondaryButton:hover:not(:disabled) {
+  background: #d1d5db;
+}
+
+.dangerButton {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.dangerButton:hover:not(:disabled) {
+  background: #fecaca;
+}
+
+.primaryButton:disabled,
+.secondaryButton:disabled,
+.dangerButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.hint {
+  margin-left: auto;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.table {
+  width: 100%;
+  min-width: 1180px;
+  border-collapse: collapse;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.table thead {
+  background: #f3f4f6;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.table th {
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  font-weight: 600;
+  text-align: left;
+  color: #1f2a44;
+  font-size: 12px;
+}
+
+.table tbody td {
+  padding: 0;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  height: 36px;
+  vertical-align: middle;
+}
+
+.indexCell {
+  text-align: center;
+  background: #f9fafb !important;
+  font-weight: 600;
+  color: #6b7280;
+  width: 36px;
+}
+
+.editableCell {
+  cursor: text;
+  padding: 0 !important;
+  position: relative;
+}
+
+.cellValue {
+  display: block;
+  padding: 8px 10px;
+  min-height: 20px;
+}
+
+.cellValue[data-align="right"] {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.cellValue[data-align="center"] {
+  text-align: center;
+}
+
+.placeholder {
+  color: #cbd5e1;
+}
+
+.editableInput {
+  width: 100%;
+  padding: 8px 10px;
+  border: 2px solid #2d3a5b;
+  font-size: 13px;
+  outline: none;
+  background: #fffbeb;
+  box-sizing: border-box;
+  font-variant-numeric: tabular-nums;
+}
+
+.editableInput[data-align="right"] {
+  text-align: right;
+}
+
+.selectCell {
+  padding: 2px 4px !important;
+}
+
+.selectCell select {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.selectCell select:hover,
+.selectCell select:focus {
+  border-color: #2d3a5b;
+  background: #fffbeb;
+  outline: none;
+}
+
+.resultCell {
+  padding: 8px 10px;
+  background: #f9fafb !important;
+  font-weight: 500;
+}
+
+.resultCell[data-align="right"] {
+  text-align: right;
+}
+
+.row[data-deviation="ok"] td {
+  background: #f0fdf4;
+}
+
+.row[data-deviation="warn"] td {
+  background: #fef9c3;
+}
+
+.row[data-deviation="danger"] td {
+  background: #fee2e2;
+}
+
+.actionsCell {
+  text-align: center;
+  width: 40px;
+  padding: 0 !important;
+}
+
+.deleteButton {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.deleteButton:hover {
+  background: #fee2e2;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 40px;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.totalsRow td {
+  background: #1f2a44 !important;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.totalsLabel {
+  text-align: right;
+}
+
+@media print {
+  .toolbar,
+  .metaForm,
+  .actionsCell,
+  .deleteButton {
+    display: none !important;
+  }
+}

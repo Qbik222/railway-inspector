@@ -1,0 +1,148 @@
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.04);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.card h2 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2a44;
+}
+
+.lead {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.field input,
+.field select {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #f9fafb;
+  transition: border-color 0.15s;
+  font-variant-numeric: tabular-nums;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #2d3a5b;
+  background: #fff;
+  outline: none;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tile {
+  background: #f3f4f6;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid transparent;
+}
+
+.tile[data-highlight="true"] {
+  background: linear-gradient(135deg, #1f2a44 0%, #2d3a5b 100%);
+  color: #fff;
+}
+
+.tile[data-tone="ok"] {
+  background: #f0fdf4;
+  border-color: #86efac;
+}
+
+.tile[data-tone="warn"] {
+  background: #fef9c3;
+  border-color: #fde047;
+}
+
+.tile[data-tone="danger"] {
+  background: #fee2e2;
+  border-color: #fca5a5;
+}
+
+.tileLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
+
+.tileValue {
+  font-size: 22px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.tileValue small {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-left: 2px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.primary,
+.secondary {
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.primary {
+  background: #1f2a44;
+  color: #fff;
+}
+
+.primary:hover:not(:disabled) {
+  background: #2d3a5b;
+}
+
+.primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.secondary {
+  background: #e5e7eb;
+  color: #1f2a44;
+}
+
+.secondary:hover {
+  background: #d1d5db;
+}
